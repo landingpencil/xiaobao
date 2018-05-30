@@ -46,9 +46,6 @@ public class ZhihuDailyNewsQuestion {
   @Expose
   private boolean favorite;
 
-
-
-
   @ColumnInfo(name = "timestamp")
   @Expose
   private long timestamp;
