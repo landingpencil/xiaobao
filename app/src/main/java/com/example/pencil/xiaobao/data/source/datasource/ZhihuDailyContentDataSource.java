@@ -18,4 +18,3 @@ public interface ZhihuDailyContentDataSource {
   void saveContent(@NonNull ZhihuDailyContent content);
 
 }
-

@@ -11,11 +11,14 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-public interface Retrofit {
+public interface RetrofitService {
 
-  String zhihu_daily_base = "https://news-at.zhihu.com/api/4/news/";
-  String DOUBAN_MONENT_BASE = "https://moment.douban.com/api/";
-  String GUOKR_handpick_base = "http://apis.guokr.com/minisite/";
+
+  String ZHIHU_DAILY_BASE = "https://news-at.zhihu.com/api/4/news/";
+
+  String DOUBAN_MOMENT_BASE = "https://moment.douban.com/api/";
+
+  String GUOKR_HANDPICK_BASE = "http://apis.guokr.com/minisite/";
 
   interface ZhihuDailyService {
 
@@ -27,7 +30,7 @@ public interface Retrofit {
 
   }
 
-  interface DoubanMomentService{
+  interface DoubanMomentService {
 
     @GET("stream/date/{date}")
     Call<DoubanMomentNews> getDoubanList(@Path("date") String date);
@@ -35,16 +38,15 @@ public interface Retrofit {
     @GET("post/{id}")
     Call<DoubanMomentContent> getDoubanContent(@Path("id") int id);
 
-
   }
 
-  interface GuokrHandpickService{
+  interface GuokrHandpickService {
 
     @GET("article.json?retrieve_type=by_minisite")
     Call<GuokrHandpickNews> getGuokrHandpick(@Query("offset")int offset, @Query("limit")int limit );
 
     @GET("article/{id}.json")
     Call<GuokrHandpickContent> getGuokrContent(@Path("id")int id);
-  }
 
+  }
 }
