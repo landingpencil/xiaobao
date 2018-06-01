@@ -6,8 +6,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class DoubanMomentNewsAuthor {
 
-
-
   @ColumnInfo(name = "is_followed")
   @Expose
   @SerializedName("is_followed")
@@ -41,7 +39,7 @@ public class DoubanMomentNewsAuthor {
   @ColumnInfo(name = "author_n_posts")
   @Expose
   @SerializedName("n_posts")
-  private int nPosts;
+  public int nPosts;
 
   @ColumnInfo(name = "author_alt")
   @Expose
@@ -51,7 +49,7 @@ public class DoubanMomentNewsAuthor {
   @ColumnInfo(name = "author_large_avatar")
   @Expose
   @SerializedName("large_avatar")
-  private String large_avatar;
+  private String largeAvatar;
 
   @ColumnInfo(name = "author_id")
   @Expose
@@ -130,12 +128,12 @@ public class DoubanMomentNewsAuthor {
     this.alt = alt;
   }
 
-  public String getLarge_avatar() {
-    return large_avatar;
+  public String getLargeAvatar() {
+    return largeAvatar;
   }
 
-  public void setLarge_avatar(String large_avatar) {
-    this.large_avatar = large_avatar;
+  public void setLargeAvatar(String largeAvatar) {
+    this.largeAvatar = largeAvatar;
   }
 
   public String getId() {

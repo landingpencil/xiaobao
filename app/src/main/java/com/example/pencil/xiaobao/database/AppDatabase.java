@@ -15,7 +15,6 @@ import com.example.pencil.xiaobao.database.dao.GuokrHandpickNewsDao;
 import com.example.pencil.xiaobao.database.dao.ZhihuDailyContentDao;
 import com.example.pencil.xiaobao.database.dao.ZhihuDailyNewsDao;
 
-
 @Database(entities = {
     ZhihuDailyNewsQuestion.class,
     DoubanMomentNewsPosts.class,
@@ -25,7 +24,6 @@ import com.example.pencil.xiaobao.database.dao.ZhihuDailyNewsDao;
     GuokrHandpickContentResult.class},
     version = 1)
 public abstract class AppDatabase extends RoomDatabase {
-
 
   static final String DATABASE_NAME = "paper-plane-db";
 

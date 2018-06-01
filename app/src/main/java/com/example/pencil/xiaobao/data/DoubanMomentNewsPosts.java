@@ -3,39 +3,16 @@ package com.example.pencil.xiaobao.data;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 import android.arch.persistence.room.TypeConverters;
 import com.example.pencil.xiaobao.database.converter.DoubanTypeConverters;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
-
 @Entity(tableName = "douban_moment_news")
 @TypeConverters(DoubanTypeConverters.class)
 public class DoubanMomentNewsPosts {
-
-  /**
-   * display_style : 10002
-   * is_editor_choice : false
-   * published_time : 2017-08-14 22:00:00
-   * original_url :
-   * url : https://moment.douban.com/post/181332/?douban_rec=1
-   * short_url : https://dou.bz/3lQDWp
-   * is_liked : false
-   * column : 洗洗睡
-   * app_css : 7
-   * abstract : 是谁偷偷偷走了月光……#光绘摄影#单次成像，非合成。地点：杭州太子湾，设备：大法a7RII
-   * date : 2017-08-14
-   * like_count : 109
-   * comments_count : 98
-   * thumbs : [{"medium":{"url":"https://img1.doubanio.com/view/presto/medium/public/t126447.jpg","width":460,"height":306},"description":"","large":{"url":"https://img1.doubanio.com/view/presto/large/public/t126447.jpg","width":460,"height":306},"tag_name":"img_1","small":{"url":"https://img1.doubanio.com/view/presto/small/public/t126447.jpg","width":320,"height":212},"id":126447}]
-   * created_time : 2017-08-14 15:29:33
-   * title : 洗洗睡｜群云青了脸，结伴回家去
-   * share_pic_url : https://moment.douban.com/share_pic/post/181332.jpg
-   * type : 1001
-   * id : 181332
-   * author : {"is_followed":false,"uid":"cindereeeella","url":"https://www.douban.com/people/cindereeeella/","avatar":"https://img3.doubanio.com/icon/u38627532-20.jpg","name":"红酥手贱","is_special_user":false,"n_posts":0,"alt":"身体不适，暂时两天一更╥﹏╥","large_avatar":"https://img3.doubanio.com/icon/up38627532-20.jpg","id":"38627532","is_auth_author":false}
-   */
 
   @ColumnInfo(name = "display_style")
   @Expose
@@ -52,9 +29,6 @@ public class DoubanMomentNewsPosts {
   @SerializedName("published_time")
   private String publishedTime;
 
-
-  private String original_url;
-
   @ColumnInfo(name = "url")
   @Expose
   @SerializedName("url")
@@ -70,12 +44,10 @@ public class DoubanMomentNewsPosts {
   @SerializedName("is_liked")
   private boolean isLiked;
 
-
   @Embedded
   @Expose
   @SerializedName("author")
   private DoubanMomentNewsAuthor author;
-
 
   @ColumnInfo(name = "column")
   @Expose
@@ -86,7 +58,6 @@ public class DoubanMomentNewsPosts {
   @Expose
   @SerializedName("app_css")
   private int appCss;
-
 
   @ColumnInfo(name = "abstract")
   @Expose
@@ -108,12 +79,10 @@ public class DoubanMomentNewsPosts {
   @SerializedName("comments_count")
   private int commentsCount;
 
-
   @ColumnInfo(name = "thumbs")
   @Expose
   @SerializedName("thumbs")
   private List<DoubanMomentNewsThumbs> thumbs;
-
 
   @ColumnInfo(name = "created_time")
   @Expose
@@ -136,6 +105,7 @@ public class DoubanMomentNewsPosts {
   private String type;
 
   @ColumnInfo(name = "id")
+  @PrimaryKey
   @Expose
   @SerializedName("id")
   private int id;
@@ -156,12 +126,12 @@ public class DoubanMomentNewsPosts {
     this.displayStyle = displayStyle;
   }
 
-  public boolean isEditorChoice() {
+  public boolean is_editor_choice() {
     return isEditorChoice;
   }
 
   public void setEditorChoice(boolean editorChoice) {
-    isEditorChoice = editorChoice;
+    this.isEditorChoice = editorChoice;
   }
 
   public String getPublishedTime() {
@@ -170,14 +140,6 @@ public class DoubanMomentNewsPosts {
 
   public void setPublishedTime(String publishedTime) {
     this.publishedTime = publishedTime;
-  }
-
-  public String getOriginal_url() {
-    return original_url;
-  }
-
-  public void setOriginal_url(String original_url) {
-    this.original_url = original_url;
   }
 
   public String getUrl() {
@@ -196,12 +158,12 @@ public class DoubanMomentNewsPosts {
     this.shortUrl = shortUrl;
   }
 
-  public boolean isLiked() {
+  public boolean is_liked() {
     return isLiked;
   }
 
   public void setLiked(boolean liked) {
-    isLiked = liked;
+    this.isLiked = liked;
   }
 
   public DoubanMomentNewsAuthor getAuthor() {
@@ -306,6 +268,14 @@ public class DoubanMomentNewsPosts {
 
   public void setId(int id) {
     this.id = id;
+  }
+
+  public boolean isEditorChoice() {
+    return isEditorChoice;
+  }
+
+  public boolean isLiked() {
+    return isLiked;
   }
 
   public boolean isFavorite() {

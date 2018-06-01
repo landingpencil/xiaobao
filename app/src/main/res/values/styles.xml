@@ -18,7 +18,7 @@
   </style>
 
   <style name="AppTheme.TranslucentStatus">
-    <!--<item name="android:windowTranslucentStatus">true</item>-->
+    <item name="android:windowTranslucentStatus">true</item>
   </style>
 
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
@@ -30,7 +30,7 @@
     <item name="android:background">@color/colorBaseBackground</item>
     <item name="android:textColorPrimary">@color/colorPrimaryText</item>
     <item name="android:textColorSecondary">@color/colorSecondaryText</item>
-    <!--<item name="android:colorAccent">@color/colorAccent</item>-->
+    <item name="android:colorAccent">@color/colorAccent</item>
   </style>
 
   <!--自定义CollapsingToolbarLayout字体大小 custom the title's text size of CollapsingToolBarLayout-->
