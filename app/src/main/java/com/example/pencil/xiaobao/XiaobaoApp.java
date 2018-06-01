@@ -4,7 +4,7 @@ import android.app.Application;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatDelegate;
 
-public class PaperPlaneApp extends Application {
+public class XiaobaoApp extends Application {
 
   @Override
   public void onCreate() {
