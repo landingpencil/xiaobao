@@ -16,27 +16,27 @@ import com.example.pencil.xiaobao.database.dao.ZhihuDailyContentDao;
 import com.example.pencil.xiaobao.database.dao.ZhihuDailyNewsDao;
 
 @Database(entities = {
-    ZhihuDailyNewsQuestion.class,
-    DoubanMomentNewsPosts.class,
-    GuokrHandpickNewsResult.class,
-    ZhihuDailyContent.class,
-    DoubanMomentContent.class,
-    GuokrHandpickContentResult.class},
-    version = 1)
+        ZhihuDailyNewsQuestion.class,
+        DoubanMomentNewsPosts.class,
+        GuokrHandpickNewsResult.class,
+        ZhihuDailyContent.class,
+        DoubanMomentContent.class,
+        GuokrHandpickContentResult.class},
+        version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
-  static final String DATABASE_NAME = "paper-plane-db";
+    static final String DATABASE_NAME = "paper-plane-db";
 
-  public abstract ZhihuDailyNewsDao zhihuDailyNewsDao();
+    public abstract ZhihuDailyNewsDao zhihuDailyNewsDao();
 
-  public abstract DoubanMomentNewsDao doubanMomentNewsDao();
+    public abstract DoubanMomentNewsDao doubanMomentNewsDao();
 
-  public abstract GuokrHandpickNewsDao guokrHandpickNewsDao();
+    public abstract GuokrHandpickNewsDao guokrHandpickNewsDao();
 
-  public abstract ZhihuDailyContentDao zhihuDailyContentDao();
+    public abstract ZhihuDailyContentDao zhihuDailyContentDao();
 
-  public abstract DoubanMomentContentDao doubanMomentContentDao();
+    public abstract DoubanMomentContentDao doubanMomentContentDao();
 
-  public abstract GuokrHandpickContentDao guokrHandpickContentDao();
+    public abstract GuokrHandpickContentDao guokrHandpickContentDao();
 
 }

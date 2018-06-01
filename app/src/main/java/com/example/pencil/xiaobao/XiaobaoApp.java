@@ -6,14 +6,15 @@ import android.support.v7.app.AppCompatDelegate;
 
 public class XiaobaoApp extends Application {
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    if (PreferenceManager
-        .getDefaultSharedPreferences(getApplicationContext()).getBoolean("night_mode", false)) {
-      AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-    } else {
-      AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        if (PreferenceManager
+                .getDefaultSharedPreferences(getApplicationContext())
+                .getBoolean("night_mode", false)) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
     }
-  }
 }

@@ -26,7 +26,7 @@ public class CustomTabsHelper {
       try {
         context.startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(url)));
       } catch (ActivityNotFoundException e) {
-        Toast.makeText(context, R.string.no_brower_found, Toast.LENGTH_SHORT).show();
+          Toast.makeText(context, R.string.no_browser_found, Toast.LENGTH_SHORT).show();
       }
     }
   }
